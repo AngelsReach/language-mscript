@@ -1,0 +1,28 @@
+'scopeName': 'source.mscript'
+'fileTypes': [
+  'ms'
+  'msa'
+]
+'name': 'MScript'
+'patterns': [
+  {
+    'include': '#string'
+  }
+]
+'repository':
+  'string':
+    'begin': '(\')'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.definition.string.begin.mscript'
+    'end': '(\')'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.string.end.mscript'
+    'name': 'string.quoted.single.mscript'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.mscript'
+      }
+    ]
