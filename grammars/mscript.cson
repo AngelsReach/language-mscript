@@ -1,87 +1,87 @@
-fileTypes: [
-  "ms"
-  "msa"
-  ".msa"
-  ".ms"
+'scope': 'source.mscript'
+'name': 'CommandHelper - MScript'
+'fileTypes': [
+  'ms'
+  'msa'
+  '.msa'
+  '.ms'
 ]
-name: "MScript"
 patterns: [
   {
-    captures:
-      "1":
-        name: "string.quoted.single.mscript"
-    comment: "Quoted String"
-    match: "(?<=[^\\\\])('[^\\\\]{0}')"
+    'captures':
+      '1':
+        'name': 'string.quoted.single.mscript'
+    'comment': 'Quoted String'
+    'match': '(?<=[^\\\\])(\'[^\\\\]{0}\')'
   }
   {
-    begin: "(?<=[^\\\\]|)([\"])"
-    captures:
-      "1":
-        name: "string.quoted.single.mscript"
-    comment: "Quoted String"
-    contentName: "string.quoted.single.mscript"
-    end: "(?<=[^\\\\]|[\\\\][\\\\]|[^\\\\']|^)([\"])"
+    'begin': '(?<=[^\\\\]|)(["])'
+    'captures':
+      '1':
+        'name': 'string.quoted.single.mscript'
+    'comment': 'Quoted String'
+    'contentName': 'string.quoted.single.mscript'
+    'end': '(?<=[^\\\\]|[\\\\][\\\\]|[^\\\\\']|^)(["])'
   }
   {
-    begin: "(?<=[^\\\\]|)(['])"
-    captures:
-      "1":
-        name: "string.quoted.single.mscript"
-    comment: "Quoted String"
-    contentName: "string.quoted.single.mscript"
-    end: "(?<=[^\\\\]|[\\\\][\\\\]|[^\\\\']|^)(['])"
+    'begin': '(?<=[^\\\\]|)([\'])'
+    'captures':
+      '1':
+        'name': 'string.quoted.single.mscript'
+    'comment': 'Quoted String'
+    'contentName': 'string.quoted.single.mscript'
+    'end': '(?<=[^\\\\]|[\\\\][\\\\]|[^\\\\\']|^)([\'])'
   }
   {
-    comment: "IVariable"
-    match: "(@[A-Za-z_0-9]+)"
-    name: "variable.other.mscript"
+    'comment': 'IVariable'
+    'match': '(@[A-Za-z_0-9]+)'
+    'name': 'variable.other.mscript'
   }
   {
-    comment: "Variable"
-    match: "(\\$[A-Za-z_0-9]*)"
-    name: "variable.other.mscript"
+    'comment': 'Variable'
+    'match': '(\\$[A-Za-z_0-9]*)'
+    'name': 'variable.other.mscript'
   }
   {
-    comment: "Single line comment"
-    match: "(#(?:.*))"
-    name: "comment.line.numbersign.mscript"
+    'comment': 'Single line comment'
+    'match': '(#(?:.*))'
+    'name': 'comment.line.numbersign.mscript'
   }
   {
-    comment: "Single line comment"
-    match: "(\\/\\/(?:.*))"
-    name: "comment.line.doubleslash.mscript"
+    'comment': 'Single line comment'
+    'match': '(\\/\\/(?:.*))'
+    'name': 'comment.line.doubleslash.mscript'
   }
   {
-    begin: "(\\/\\*)"
-    comment: "Multi-line comment"
-    end: "(\\*\\/)"
-    name: "comment.block.mscript"
+    'begin': '(\\/\\*)'
+    'comment': 'Multi-line comment'
+    'end': '(\\*\\/)'
+    'name': 'comment.block.mscript'
   }
   {
-    comment: "Highlight Operators"
-    match: "([=\\<\\>\\!\\|\\&])"
-    name: "keyword.operator.mscript"
+    'comment': 'Highlight Operators'
+    'match': '([=\\<\\>\\!\\|\\&])'
+    'name': 'keyword.operator.mscript'
   }
   {
-    comment: "Highlight Labels"
-    match: "([a-zA-Z_][a-zA-Z0-9_]+)(?=:)(?=[^\\/])"
-    name: "keyword.other.mscript"
+    'comment': 'Highlight Labels'
+    'match': '([a-zA-Z_][a-zA-Z0-9_]+)(?=:)(?=[^\\/])'
+    'name': 'keyword.other.mscript'
   }
   {
-    comment: "Highlight Numerics"
-    match: "([0-9])"
-    name: "constant.numeric.mscript"
+    'comment': 'Highlight Numerics'
+    'match': '([0-9])'
+    'name': 'constant.numeric.mscript'
   }
   {
-    comment: "Keywords"
-    match: "(\\b(proc|auto|in|for|false|do|while|switch|instanceof|foreach|default|as|bind|null|else|true|if|closure|case)\\b)(?=[^A-Za-z0-9])"
-    name: "constant.language.mscript"
+    'comment': 'Keywords'
+    'match': '(\\b(auto|proc|in|for|false|do|while|instanceof|switch|foreach|as|default|bind|null|else|true|if|closure|case)\\b)(?=[^A-Za-z0-9])'
+    'name': 'constant.language.mscript'
   }
   {
-    captures:
-      "1":
-        name: "entity.name.function.mscript"
-    match: "([\\w]{1,})(\\s*\\()"
+    'captures':
+      '1':
+        'name': 'entity.name.function.mscript'
+    'match': '([\\w]{1,})(\\s*\\()'
   }
 ]
-scopeName: "source.mscript"
