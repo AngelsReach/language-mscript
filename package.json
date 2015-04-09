@@ -1,6 +1,6 @@
 {
   "name": "language-mscript",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "MScript language support in Atom",
   "homepage": "https://github.com/jacobwgillespie/language-mscript",
   "repository": {
