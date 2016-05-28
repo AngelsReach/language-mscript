@@ -1,4 +1,4 @@
-'source.mscript':
+'.source.mscript':
     'Alias template':
         'prefix': 'alias'
         'body': """
